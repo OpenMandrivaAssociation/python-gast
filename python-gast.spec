@@ -1,6 +1,6 @@
 Summary:	Python AST that abstracts the underlying Python version
 Name:		python-gast
-Version:	0.5.4
+Version:	0.6.0
 Release:	1
 Group:		Development/Python
 License:	BSD
