@@ -1,7 +1,7 @@
 Summary:	Python AST that abstracts the underlying Python version
 Name:		python-gast
 Version:	0.6.0
-Release:	1
+Release:	2
 Group:		Development/Python
 License:	BSD
 URL:		https://github.com/serge-sans-paille/gast/
