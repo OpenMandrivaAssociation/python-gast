@@ -1,18 +1,20 @@
-Summary:	Python AST that abstracts the underlying Python version
+%define module gast
+
 Name:		python-gast
-Version:	0.6.0
-Release:	2
+Version:	0.7.0
+Release:	1
+Summary:	Python AST that abstracts the underlying Python version
 Group:		Development/Python
 License:	BSD
 URL:		https://github.com/serge-sans-paille/gast/
-#Source0:	https://github.com/serge-sans-paille/gast//archive/%{version}/gast-%{version}.tar.gz
-Source0:	https://pypi.io/packages/source/g/gast/gast-%{version}.tar.gz
-BuildRequires:	pkgconfig(python)
-BuildRequires:	python3dist(pip)
-BuildRequires:	python3dist(setuptools)
-BuildRequires:	python3dist(wheel)
+Source0:	https://github.com/serge-sans-paille/gast/archive/%{version}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
+BuildSystem:	python
+BuildArch:		noarch
 
-BuildArch:	noarch
+BuildRequires:	pkgconfig(python)
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(wheel)
 
 %description
 A generic AST to represent Python2 and Python3’s Abstract Syntax Tree(AST).
@@ -21,19 +23,7 @@ GAST provides a compatibility layer between the AST of various Python versions,
 as produced by ast.parse from the standard ast module.
 
 %files
-%license LICENSE
 %doc README.rst
-%{py_sitedir}/gast
-%{py_sitedir}/gast-*.*-info
-
-#--------------------------------------------------------------------
-
-%prep
-%autosetup -n gast-%{version}
-
-%build
-%py_build
- 
-%install
-%py_install
-
+%license LICENSE
+%{python_sitelib}/%{module}
+%{python_sitelib}/%{module}-%{version}-*.*-info
