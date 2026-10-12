@@ -2,7 +2,7 @@
 
 Name:		python-gast
 Version:	0.7.0
-Release:	1
+Release:	2
 Summary:	Python AST that abstracts the underlying Python version
 Group:		Development/Python
 License:	BSD
